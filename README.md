@@ -2,30 +2,25 @@
 
 ## Project Overview
 
-This project analyzes retail transaction data to identify:
-- sales trends
-- profitable categories
-- top customers
-- loss-making products
-- regional performance
+Built a retail sales analytics system using Python and SQL to analyze 9,994 retail transactions containing customer orders, product categories, regional sales, discounts, and profit data.
 
-The project was built using Python, Pandas, SQL, and data visualization libraries.
+Performed data preprocessing, feature engineering, exploratory data analysis (EDA), and SQL-based business analysis to identify sales trends, profitable categories, high-value customers, and loss-making products.
 
 ---
 
-## Problem Statement
+## Dataset Details
 
-Retail businesses generate large amounts of transactional data but often struggle to:
-- track profitability
-- analyze customer behavior
-- identify high-performing products
-- detect operational inefficiencies
-
-This project solves these challenges using data analytics techniques.
+- Total Records: 9,994
+- Total Orders: 5,009
+- Total Sales: 2.29M+
+- Total Profit: 286K+
+- Regions Analyzed: 4
+- Product Categories: 3
+- Customer Segments: 3
 
 ---
 
-## Tech Stack
+## Technologies Used
 
 - Python
 - Pandas
@@ -34,66 +29,73 @@ This project solves these challenges using data analytics techniques.
 - Seaborn
 - SQLite
 - Jupyter Notebook
+- Git & GitHub
 
 ---
 
-## Dataset Information
+## Data Preprocessing
 
-Dataset contains:
-- 9,994 retail transactions
-- customer orders
-- product categories
-- regional sales
-- profit and discount information
+Performed:
+- datetime conversion for order and shipping dates
+- duplicate record validation
+- missing value analysis
+- statistical analysis of numerical columns
 
----
-
-## Project Workflow
-
-1. Data Collection
-2. Data Cleaning
-3. Feature Engineering
-4. Exploratory Data Analysis
-5. SQL Business Analysis
-6. Business Insights Generation
+Created new business features:
+- Order Year
+- Order Month
+- Shipping Days
+- Profit Margin %
 
 ---
 
-## Features Implemented
+## Exploratory Data Analysis (EDA)
 
-### Python Analysis
-- Data preprocessing
-- Date conversion
-- Feature engineering
-- Monthly sales analysis
-- Regional analysis
-- Product analysis
-- Customer analysis
-- Profitability analysis
+### Sales Trend Analysis
+- Analyzed monthly sales trends across 12 months
+- Identified November as highest revenue month with 352K+ sales
+- Identified February as lowest sales month
 
-### SQL Analysis
+### Regional Analysis
+- West region generated highest sales: 725K+
+- South region showed lowest sales performance
+
+### Category Analysis
+- Technology category generated highest sales: 836K+
+- Furniture category showed very low profitability despite high sales
+
+### Product Analysis
+- Identified top 10 products by sales
+- Canon imageCLASS 2200 Advanced Copier generated 61K+ sales
+
+### Customer Analysis
+- Analyzed top-performing customers
+- Highest customer sales exceeded 25K+
+
+### Segment Analysis
+- Consumer segment generated 1.16M+ sales
+- Corporate segment generated 706K+ sales
+
+### Loss Analysis
+- Detected 1,871 loss-making transactions
+- Identified products generating losses up to 8.8K
+
+---
+
+## SQL Business Analysis
+
+Performed SQL analysis using SQLite database.
+
+Implemented:
 - KPI queries
-- GROUP BY analysis
-- Customer ranking
-- Product profitability analysis
-- Shipping performance analysis
-- Monthly sales trend analysis
+- sales aggregation
+- customer ranking
+- profitability analysis
+- regional sales analysis
+- shipping performance analysis
+- monthly sales analysis
 
----
-
-## Key Business Insights
-
-- Technology category generated highest profit
-- Furniture category showed low profitability
-- November and December had highest sales
-- West region generated maximum revenue
-- Several products generated heavy losses
-- Consumer segment contributed highest sales
-
----
-
-## SQL Concepts Used
-
+SQL concepts used:
 - SUM()
 - AVG()
 - COUNT()
@@ -105,9 +107,19 @@ Dataset contains:
 
 ---
 
+## Key Business Insights
+
+- Technology was the most profitable category with 145K+ profit
+- Furniture generated only 18K profit despite high sales
+- November and December showed strongest seasonal sales performance
+- Standard Class shipping averaged 5 days delivery time
+- Multiple products generated significant financial losses
+- Consumer segment contributed highest overall revenue
+
+---
+
 ## Project Structure
 
-```bash
 Retail-Sales-Analytics-System/
 │
 ├── data/
@@ -115,55 +127,12 @@ Retail-Sales-Analytics-System/
 │   └── processed/
 │
 ├── notebooks/
-├── sql/
 ├── reports/
+├── sql/
 ├── visuals/
 ├── src/
 │
 ├── README.md
 ├── requirements.txt
-└── retail_sales.db
-```
-
----
-
-## How to Run
-
-### Clone Repository
-
-```bash
-git clone <repository-link>
-```
-
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Run Jupyter Notebook
-
-```bash
-jupyter notebook
-```
-
----
-
-## Skills Demonstrated
-
-- Data Cleaning
-- Exploratory Data Analysis
-- SQL Analytics
-- Business Intelligence
-- Data Visualization
-- KPI Reporting
-
----
-
-## Resume Project Description
-
-Retail Sales Analytics System — Python, SQL  
-- Analyzed 10,000+ retail transactions containing sales, profit, customer, and regional data  
-- Performed preprocessing, feature engineering, trend analysis, and profitability analysis using Python and SQL  
-- Generated business insights identifying top-performing products, customer segments, and loss-making areas  
-- Built SQL KPI reports using aggregation, grouping, sorting, and analytical queries
+├── retail_sales.db
+└── main.py
